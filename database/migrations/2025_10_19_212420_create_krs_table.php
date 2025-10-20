@@ -11,7 +11,7 @@ class CreateKrsTable extends Migration
             $table->id();
             $table->foreignId('mahasiswa_id')->constrained('mahasiswas')->onDelete('cascade');
             $table->foreignId('matakuliah_id')->constrained('matakuliahs')->onDelete('cascade');
-            $table->string('semester'); // contoh: Ganjil / Genap
+            $table->string('semester');
             $table->timestamps();
             $table->unique(['mahasiswa_id','matakuliah_id','semester'], 'krs_unique');
         });

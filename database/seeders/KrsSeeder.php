@@ -13,7 +13,6 @@ class KrsSeeder extends Seeder
         $mahas = Mahasiswa::limit(15)->get();
 
         foreach($mahas as $idx => $mhs) {
-            // beri 1-3 matakuliah random
             $take = rand(1,3);
             $selected = $mks->random($take);
             foreach($selected as $mk) {
